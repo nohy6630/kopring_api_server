@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor
 class Article(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    val id: Long = 0L,
 
     var title: String,
 
     var content: String
-){
+) {
     companion object {
         fun of(title: String, content: String): Article {
-            return Article(title = title, content = content, id = 0)
+            return Article(title = title, content = content)
         }
     }
 }

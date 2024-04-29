@@ -4,7 +4,7 @@ import com.example.kopring_api_server.domain.article.entity.Article
 
 data class ReadAllArticleRes(
     val size: Int,
-    val items: List<ReadArticleRes>
+    val articles: List<ReadArticleRes>
 ) {
     companion object {
         fun of(articles: List<Article>): ReadAllArticleRes {
